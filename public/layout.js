@@ -122,10 +122,12 @@ const headerEl = `
           <img src="assets/purple shell.png">
         </section>
         <section class="navbar-center">
-          <a href="https://burnes.neocities.org/" class="btn btn-link">home</a>
-          <a href="art" class="btn btn-link">art & writing</a>
+          <a href="index.html" class="btn btn-link">home</a>
+          <a href="collections" class="btn btn-link">collections</a>
+          <a href="art" class="btn btn-link">creations</a>
           <a href="dnd" class="btn btn-link">d&d</a>
-          <a href="knickknacks" class="btn btn-link">knick knacks</a>
+          <a href="games" class="btn btn-link">games</a>
+          <a href="pet" class="btn btn-link">pet stuff</a>
           <a href="resources" class="btn btn-link">resources</a>
         </section>
         <section class="navbar-section">
