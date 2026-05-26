@@ -113,7 +113,7 @@ const nesting = getNestingString();
 const headerEl = `
 <div class="container">
 	<header>
-    <center><img src="/public/assets/starfish-pk-lt.png"> <a href="/public/index.html"><img src="/public/assets/name.png"></a> <img src="/public/assets/starfish-pk-rt.png"></center><br>
+    <center><img src="../assets/starfish-pk-lt.png"> <a href="../index.html"><img src="../assets/name.png"></a> <img src="../assets/starfish-pk-rt.png"></center><br>
   </header>
   </div>
   </div>
