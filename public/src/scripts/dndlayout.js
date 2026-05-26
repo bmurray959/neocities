@@ -113,34 +113,31 @@ const nesting = getNestingString();
 const headerEl = `
 <div class="container">
 	<header>
-    <center><img src="../assets/pink starfish left.png"> <a href="https://burnes.neocities.org"><img src="../assets/name.png"></a> <img src="../assets/pink starfish right.png"></center><br>
+    <center><img src="/public/assets/starfish-pk-lt.png"> <a href="/public/index.html"><img src="/public/assets/name.png"></a> <img src="/public/assets/starfish-pk-rt.png"></center><br>
   </header>
-  <div class="columns">
-    <div class="column col-nav">
-      <header class="navbar">
-        <section class="navbar-section">
-          <img src="../assets/purple shell.png">
-        </section>
-        <section class="navbar-center">
-          <a href="https://burnes.neocities.org/" class="btn btn-link">site home</a>
-          <a href="https://burnes.neocities.org/pets" class="btn btn-link">pet home</a>
-          <a href="https://burnes.neocities.org/pets/petblog" class="btn btn-link">blog home</a>
-          <a href="https://burnes.neocities.org/pets/petblog/archive" class="btn btn-link">archive</a>
-        </section>
-        <section class="navbar-section">
-          <img src="../assets/purple shell.png">
-        </section>
-      </header>
-    </div>
   </div>
-</div><br>
-        
+  </div>
+</div>
+<div class="container">
+    <div class="columns">
+    <div class="column col-nav">
+        <section class="navbar-center">
+          <a href="../dnd">back</a>
+        </section>
+</div></div></div><br>
 `;
 
 // Insert your footer HTML inside these ``. You can use HTML as usual.
 // Remove all the content inside the `` if you don't have a footer.
 const footerEl = `
-	<footer class= "modal-footer">
+<br><div class="container">
+    <div class="columns">
+    <div class="column col-nav">
+        <section class="navbar-center">
+          <a href="#">top</a>
+        </section>
+</div></div></div>
+    <footer class= "modal-footer">
       <center><div class="text-gray">© 2026 burnes</div></center>
     </footer>
 `;

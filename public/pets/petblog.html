@@ -4,27 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>pet blog</title>
-    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
-    <script src="petslayout.js"></script>    
+    <link href="/public/src/style/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/public/src/scripts/petlayout.js"></script>    
   </head>
   <body>
     <div id="container">
    
-    <div id="content">    
+    <div class="columns">
+        <!--Left-->
+        <div class="column col-left"><h6><center><img src="/public/assets/coral-sm-bl-lt.png"> recent posts <img src="/public/assets/coral-sm-bl-rt.png"></center></h6>
+          <div id="recentpostlistdiv"></div>
+        </div>
+        <!--Main-->
+        <div class="column col-main"><h6><center><img src="/public/assets/coral-sm-bl-lt.png"> about <img src="/public/assets/coral-sm-bl-rt.png"></center></h6>
+          My boy has some reactivity issues that we are working on. I made this blog to keep record of his progress, and keep a log of our time together!
+        <br><br>
+          <center>
+            <img src="/public/assets/shell-lg-pl.png">
+            <br>
+            </center>
+          <div class="divider"></div>
+          <center>
+            <img src="/public/assets/banner.png">
+          </center>
+        </div>
+        <!--Right-->
+        <div class="column col-right"><h6><center><img src="/public/assets/coral-sm-bl-lt.png"> tags <img src="/public/assets/coral-sm-bl-rt.png"></center></h6>
+          <div id="tagList"></div>
+        </div>
+      </div>     
       
       
-      <h1>Welcome to my blog!</h1>
       
-      <div id="taggedPosts"></div>
-      <div id="tagList"></div>
-      
-      
-      <div id="recentpostlistdiv"></div>
       
     </div> <!-- end of div id="content" -->
 
     </div> <!-- end of div id="container" -->    
   <!-- Here's the link to our JavaScript! -->
-  <script src="./tagsScript.js"></script>
+  <script src="/public/src/scripts/tagsScript.js"></script>
   </body>
 </html>

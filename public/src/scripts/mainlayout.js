@@ -113,25 +113,23 @@ const nesting = getNestingString();
 const headerEl = `
 <div class="container">
 	<header>
-    <center><img src="assets/pink starfish left.png"> <a href="https://burnes.neocities.org"><img src="assets/name.png"></a> <img src="assets/pink starfish right.png"></center><br>
+    <center><img src="/public/assets/starfish-pk-lt.png"> <a href="/public/index.html"><img src="/public/assets/name.png"></a> <img src="/public/assets/starfish-pk-rt.png"></center><br>
   </header>
   <div class="columns">
     <div class="column col-nav">
       <header class="navbar">
         <section class="navbar-section">
-          <img src="assets/purple shell.png">
+          <img src="/public/assets/shell-lg-pl.png">
         </section>
         <section class="navbar-center">
-          <a href="index.html" class="btn btn-link">home</a>
-          <a href="collections" class="btn btn-link">collections</a>
-          <a href="art" class="btn btn-link">creations</a>
-          <a href="dnd" class="btn btn-link">d&d</a>
-          <a href="games" class="btn btn-link">games</a>
-          <a href="pet" class="btn btn-link">pet stuff</a>
-          <a href="resources" class="btn btn-link">resources</a>
+          <a href="${nesting}/index.html" class="btn btn-link">home</a>
+          <a href="${nesting}/art/index.html" class="btn btn-link">creations</a>
+          <a href="${nesting}/dnd/index.html" class="btn btn-link">d&d</a>
+          <a href="${nesting}/resources.html" class="btn btn-link">resources</a> | 
+          <a href="${nesting}/pets/index.html" class="btn btn-link">pet stuff</a>
         </section>
         <section class="navbar-section">
-          <img src="assets/purple shell.png">
+          <img src="/public/assets/shell-lg-pl.png">
         </section>
       </header>
     </div>

@@ -1,0 +1,24 @@
+<body>
+    <div class="container">
+      <div class="columns">
+        <!--Left-->
+        <div class="column col-left"><h6><center><img src="/public/assets/coral-sm-bl-lt.png"> x <img src="/public/assets/coral-sm-bl-rt.png"></center></h6>
+        </div>
+        <!--Main-->
+        <div class="column col-main"><h6><center><img src="/public/assets/coral-sm-bl-lt.png"> x <img src="/public/assets/coral-sm-bl-rt.png"></center></h6>
+        <br><br>
+          <center>
+            <img src="/public/assets/shell-lg-pl.png">
+            <br>
+            </center>
+          <div class="divider"></div>
+          <center>
+            <img src="/public/assets/banner.png">
+          </center>
+        </div>
+        <!--Right-->
+        <div class="column col-right"><h6><center><img src="/public/assets/coral-sm-bl-lt.png"> x <img src="/public/assets/coral-sm-bl-rt.png"></center></h6>
+        </div>
+      </div>
+    </div>      
+  </body>

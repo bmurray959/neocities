@@ -113,31 +113,34 @@ const nesting = getNestingString();
 const headerEl = `
 <div class="container">
 	<header>
-    <center><img src="${nesting}/assets/pink starfish left.png"> <a href="https://burnes.neocities.org"><img src="${nesting}/assets/name.png"></a> <img src="${nesting}/assets/pink starfish right.png"></center><br>
+    <center><img src="/public/assets/starfish-pk-lt.png"> <a href="/public/index.html"><img src="/public/assets/name.png"></a> <img src="/public/assets/starfish-pk-rt.png"></center><br>
   </header>
-  </div>
-  </div>
-</div>
-<div class="container">
-    <div class="columns">
+  <div class="columns">
     <div class="column col-nav">
-        <section class="navbar-center">
-          <a href="../dnd">back</a>
+      <header class="navbar">
+        <section class="navbar-section">
+          <img src="/public/assets/shell-lg-pl.png">
         </section>
-</div></div></div><br>
+        <section class="navbar-center">
+          <a href="/public/index.html" class="btn btn-link">site home</a>
+          <a href="/public/pets/index.html" class="btn btn-link">pet home</a>
+          <a href="/public/pets/petblog.html" class="btn btn-link">blog home</a>
+          <a href="/public/pets/archive.html" class="btn btn-link">archive</a>
+        </section>
+        <section class="navbar-section">
+          <img src="/public/assets/shell-lg-pl.png">
+        </section>
+      </header>
+    </div>
+  </div>
+</div><br>
+        
 `;
 
 // Insert your footer HTML inside these ``. You can use HTML as usual.
 // Remove all the content inside the `` if you don't have a footer.
 const footerEl = `
-<br><div class="container">
-    <div class="columns">
-    <div class="column col-nav">
-        <section class="navbar-center">
-          <a href="#">top</a>
-        </section>
-</div></div></div>
-    <footer class= "modal-footer">
+	<footer class= "modal-footer">
       <center><div class="text-gray">© 2026 burnes</div></center>
     </footer>
 `;

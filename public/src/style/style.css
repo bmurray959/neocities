@@ -1642,12 +1642,16 @@ video.video-responsive::before {
 [class~="col-"].col-nav,
 [class~="col-"].col-left,
 [class~="col-"].col-right,
+[class~="col-"].col-left-bked,
+[class~="col-"].col-right-bked,
 [class~="col-"].col-main,
 [class~="col-"].col-main-lg,
 .column.col-auto,
 .column.col-nav,
 .column.col-left,
 .column.col-right,
+.column.col-left-bked,
+.column.col-right-bked,
 .column.col-main,
 .column.col-main-lg {
   -ms-flex: none;
@@ -1696,6 +1700,26 @@ video.video-responsive::before {
   
 .col-right {
   width: 10%;
+  background-color: #e2e9e9;
+  padding-bottom: 5px;
+  border-radius: 0px 25px 25px 0px;
+  border: 1px;
+  border-style: solid;
+  border-color: #b7c4ad;
+}
+
+.col-left-bked {
+  width: 5%;
+  background-color: #e2e9e9;
+  padding-bottom: 5px;
+  border-radius: 25px 0px 0px 25px;
+  border: 1px;
+  border-style: solid;
+  border-color: #b7c4ad;
+}
+  
+.col-right-bked {
+  width: 5%;
   background-color: #e2e9e9;
   padding-bottom: 5px;
   border-radius: 0px 25px 25px 0px;

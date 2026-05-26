@@ -37,16 +37,20 @@ After this point, tags can be in any order, are case-sensitive, and shouldn't co
 */
 
 /* tag list:
-<img src='/public/assets/tagicons/sun.png'> Sunny
-<img src='public/assets/tagicons/bikefree.png'> Bike Free
+<img src='/public/assets/tagicons/sun.png'> Hot
+<img src='/public/assets/tagicons/bikefree.png'> Bike Free
+Route: Field Walk
+Route: 1
+Route: 2
 
 
 end tag list */
 
 let postsArray = [
-//[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ), "exampleTag1" ],
-//[ "posts/2020-11-10-My-Third-Post-Example.html", "" ],
-[ "posts/2026-05-25-Morning-Walk.html", "", "<img src='/public/assets/tagicons/sun.png'> Sunny", "<img src='/public/assets/tagicons/bikefree.png'> Bike Free",],
+//[ "pets/blogposts/2026-05-26-Afternoon-Walk.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ), "exampleTag1" ],
+[ "pets/blogposts/2026-05-26-Morning-Walk.html", "", "<img src='/public/assets/tagicons/sun.png'> Hot","<img src='/public/assets/tagicons/bikefree.png'> Bike Free", "Route: 1" ],
+[ "pets/blogposts/2026-05-25-Afternoon-Walk.html", "", "<img src='/public/assets/tagicons/sun.png'> Hot","<img src='/public/assets/tagicons/bikefree.png'> Bike Free", "Route: Field Walk" ],
+[ "pets/blogposts/2026-05-25-Morning-Walk.html", "", "<img src='/public/assets/tagicons/sun.png'> Hot", "<img src='/public/assets/tagicons/bikefree.png'> Bike Free", "Route: 1" ],
 //[ "posts/2020-11-10-Post-Template.html", "", "1", "2", "3" ],
 ];
 
@@ -61,21 +65,21 @@ const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 
 //Check if you are in posts or tags (if so, the links will have to go up a directory)
 let relativePath = ".";
-if ( url.includes("posts/") || url.includes("tags/") ) {
+if ( url.includes("/public/pets/blogposts/") || url.includes("tags/") ) {
   relativePath = "..";
 }
 
 //Write the Header HTML, a series of list items containing links.
-let headerHTML = '<ul> <li><a href="' + relativePath + '/petblog.html">Home</a></li>' + 
-'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
-'<li><a href="' + relativePath + '/about.html">About</a></li> </ul>';
+let headerHTML = '<ul> <li><a href="' + relativePath + '/public/pets/petblog.html">Home</a></li>' + 
+'<li><a href="' + relativePath + '/public/pets/archive.html">Archive</a></li>' +
+'<li><a href="' + relativePath + '/public/pets/about.html">About</a></li> </ul>';
 
 //Write the Footer HTML, which has information about the blog.
 let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
-let currentFilename = url.substring(url.lastIndexOf('posts/'));
+let currentFilename = url.substring(url.lastIndexOf('pets/blogposts/'));
 //Depending on the web server settings (Or something?), the browser url may or may not have ".html" at the end. If not, we must add it back in to match the posts array. (12-19-2022 fix)
 if ( ! currentFilename.endsWith(".html") ) {
     currentFilename += ".html";
@@ -99,7 +103,7 @@ function formatPostTitle(i) {
 	if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
 	  return postsArray[i][0].slice(17,-5).replace(/-/g," ");
     } else {
-      return postsArray[i][0].slice(6,-5).replace(/-/g," ");
+      return postsArray[i][0].slice(26,-5).replace(/-/g," ");
     }
   }
 }
@@ -111,8 +115,8 @@ let postTagsHTML = "Tagged as: ";
 if ( currentIndex > -1 ) {
   currentPostTitle = formatPostTitle( currentIndex );
   //Generate the "nice to read" version of date
-  if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 6,17 ) ) ) {
-    let monthSlice = postsArray[currentIndex][0].slice( 11,13 );
+  if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 15,67 ) ) ) {
+    let monthSlice = postsArray[currentIndex][0].slice( 20,22 );
     let month = "";
     if ( monthSlice === "01") { month = "Jan";}
     else if ( monthSlice === "02") { month = "Feb";}
@@ -126,7 +130,7 @@ if ( currentIndex > -1 ) {
     else if ( monthSlice === "10") { month = "Oct";}
     else if ( monthSlice === "11") { month = "Nov";}
     else if ( monthSlice === "12") { month = "Dec";}
-	niceDate = postsArray[currentIndex][0].slice( 14,16 ) + " " + month + ", " + postsArray[currentIndex][0].slice( 6,10 );
+	niceDate = postsArray[currentIndex][0].slice( 23,25 ) + " " + month + ", " + postsArray[currentIndex][0].slice( 15,19 );
   }
 	//create html list of post tags
 	console.log("About to create tag list");
@@ -145,13 +149,13 @@ function formatPostLink(i,arrayToFormat) {
   if ( arrayToFormat[i][1] != "" ) {
     postTitle_i = decodeURI(arrayToFormat[i][1]);
   } else {
-	if (  postDateFormat.test ( arrayToFormat[i][0].slice( 6,17 ) ) ) {
+	if (  postDateFormat.test ( arrayToFormat[i][0].slice( 15,67 ) ) ) {
 	  postTitle_i = arrayToFormat[i][0].slice(17,-5).replace(/-/g," ");
     } else {
       postTitle_i = arrayToFormat[i][0].slice(6,-5).replace(/-/g," ");
     }
   }
-  if (  postDateFormat.test ( arrayToFormat[i][0].slice( 6,17 ) ) ) {
+  if (  postDateFormat.test ( arrayToFormat[i][0].slice( 15,17 ) ) ) {
     return '<li><a href="' + relativePath + '/'+ arrayToFormat[i][0] +'">' + arrayToFormat[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
   } else {
     return '<li><a href="../' + relativePath + '/'+ arrayToFormat[i][0] +'">' + postTitle_i + '</a></li>';
@@ -166,7 +170,7 @@ postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
+let recentPostListHTML = "<ul>";
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
   recentPostListHTML += formatPostLink(i,postsArray);
@@ -216,7 +220,7 @@ function getTaggedPosts (pageTitle) {
 			}
 		}
 	}
-	let taggedPostListHTML = '<ul class="no-bullets">';
+	let taggedPostListHTML = '<ul style="list-style-type:none;">';
 	for ( let i = 0; i < taggedPostArray.length; i++ ) {
   		taggedPostListHTML += formatPostLink(i,taggedPostArray);
 	}
@@ -242,7 +246,7 @@ function getTagList () {
 
 //new function to turn tag array into list of links
 function formatTagList (tagArray) {
-	let tagListHTML = '<h3>tags:</h3><ul class="no-bullets">';
+	let tagListHTML = '<ul style="list-style-type:none;"';
 	for (i=0;i<tagArray.length;i++) {
   		tagListHTML += '<li><a href="/tags/' + tagArray[i] + '">' + tagArray[i] + '</a></li>';
 	}
