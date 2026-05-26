@@ -113,22 +113,22 @@ const nesting = getNestingString();
 const headerEl = `
 <div class="container">
 	<header>
-    <center><img src="/public/assets/starfish-pk-lt.png"> <a href="/public/index.html"><img src="/public/assets/name.png"></a> <img src="/public/assets/starfish-pk-rt.png"></center><br>
+    <center><img src="../assets/starfish-pk-lt.png"> <a href="https://burnes.neocities.org/"><img src="../assets/name.png"></a> <img src="../assets/starfish-pk-rt.png"></center><br>
   </header>
   <div class="columns">
     <div class="column col-nav">
       <header class="navbar">
         <section class="navbar-section">
-          <img src="/public/assets/shell-lg-pl.png">
+          <img src="../assets/shell-lg-pl.png">
         </section>
         <section class="navbar-center">
-          <a href="/public/index.html" class="btn btn-link">site home</a>
-          <a href="/public/pets/index.html" class="btn btn-link">pet home</a>
-          <a href="/public/pets/petblog.html" class="btn btn-link">blog home</a>
-          <a href="/public/pets/archive.html" class="btn btn-link">archive</a>
+          <a href="https://burnes.neocities.org/" class="btn btn-link">site home</a>
+          <a href="index.html" class="btn btn-link">pet home</a>
+          <a href="petblog.html" class="btn btn-link">blog home</a>
+          <a href="archive.html" class="btn btn-link">archive</a>
         </section>
         <section class="navbar-section">
-          <img src="/public/assets/shell-lg-pl.png">
+          <img src="../assets/shell-lg-pl.png">
         </section>
       </header>
     </div>

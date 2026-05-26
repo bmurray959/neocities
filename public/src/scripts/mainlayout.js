@@ -113,13 +113,13 @@ const nesting = getNestingString();
 const headerEl = `
 <div class="container">
 	<header>
-    <center><img src="/public/assets/starfish-pk-lt.png"> <a href="/public/index.html"><img src="/public/assets/name.png"></a> <img src="/public/assets/starfish-pk-rt.png"></center><br>
+    <center><img src="${nesting}/assets/starfish-pk-lt.png"> <a href="${nesting}/index.html"><img src="${nesting}/assets/name.png"></a> <img src="${nesting}/assets/starfish-pk-rt.png"></center><br>
   </header>
   <div class="columns">
     <div class="column col-nav">
       <header class="navbar">
         <section class="navbar-section">
-          <img src="/public/assets/shell-lg-pl.png">
+          <img src="${nesting}/assets/shell-lg-pl.png">
         </section>
         <section class="navbar-center">
           <a href="${nesting}/index.html" class="btn btn-link">home</a>
@@ -129,7 +129,7 @@ const headerEl = `
           <a href="${nesting}/pets/index.html" class="btn btn-link">pet stuff</a>
         </section>
         <section class="navbar-section">
-          <img src="/public/assets/shell-lg-pl.png">
+          <img src="${nesting}/assets/shell-lg-pl.png">
         </section>
       </header>
     </div>
